@@ -1,0 +1,25 @@
+spring:
+  batch:
+    initialize-schema: always
+    job:
+      names: ${job.name:NONE}
+      enabled: true
+  main:
+    web-application-type: none
+  profiles:
+    active: dev
+
+#  datasource:
+#    hikari:
+#      connection-timeout: 5000
+#      idle-timeout: 3000
+
+logging:
+#  config: classpath:logback-spring.xml
+  level:
+    root: INFO
+    org:
+      springframework:
+        batch: DEBUG
+        boot:
+          autoconfigure: ERROR
