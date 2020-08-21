@@ -1,10 +1,13 @@
 package com.example.pay;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 public class BankTest {
@@ -12,7 +15,9 @@ public class BankTest {
     @Autowired
     private BankRepository bankRepository;
 
-    @Before
+    private List<Bank> bankList;
+
+    @BeforeEach
     public void init() {
         Bank bank = Bank.builder()
                 .id(1L)
@@ -24,13 +29,19 @@ public class BankTest {
         bankRepository.save(bank);
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         bankRepository.deleteAll();
     }
 
     @Test
     public void createBankInfoSuccess() throws Exception {
-        System.out.println("TEST");
+        // 은행사 종류 및 식별 번호
+        System.out.println(
+            bankList.stream()
+                    .map(Bank::getAccountNumb)
+                    .collect(Collectors.toList())
+
+        );
     }
 }
