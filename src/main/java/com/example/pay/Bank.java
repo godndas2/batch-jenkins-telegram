@@ -24,11 +24,15 @@ public class Bank {
     @Column(length = 4, nullable = false)
     private int accountPw;
 
+    @Column(nullable = false)
+    private int bankCode;
+
     @Builder
-    public Bank(Long id, String name, int accountNumb, int accountPw) {
+    public Bank(Long id, String name, int accountNumb, int accountPw, int bankCode) {
         this.id = id;
         this.name = name;
         this.accountNumb = accountNumb;
         this.accountPw = accountPw;
+        this.bankCode = bankCode;
     }
 }
