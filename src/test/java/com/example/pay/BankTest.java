@@ -37,11 +37,6 @@ public class BankTest {
     @Test
     public void createBankInfoSuccess() throws Exception {
         // 은행사 종류 및 식별 번호
-        System.out.println(
-            bankList.stream()
-                    .map(Bank::getAccountNumb)
-                    .collect(Collectors.toList())
 
-        );
     }
 }

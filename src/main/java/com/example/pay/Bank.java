@@ -28,6 +28,14 @@ public class Bank {
     private int bankCode;
 
     @Builder
+    public Bank(String name, int accountNumb, int accountPw, int bankCode) {
+        this.name = name;
+        this.accountNumb = accountNumb;
+        this.accountPw = accountPw;
+        this.bankCode = bankCode;
+    }
+
+    @Builder
     public Bank(Long id, String name, int accountNumb, int accountPw, int bankCode) {
         this.id = id;
         this.name = name;
