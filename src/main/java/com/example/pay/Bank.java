@@ -16,7 +16,7 @@ public class Bank {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String bankName;
 
     @Column(nullable = false)
     private int accountNumb;
@@ -28,19 +28,30 @@ public class Bank {
     private int bankCode;
 
     @Builder
-    public Bank(String name, int accountNumb, int accountPw, int bankCode) {
-        this.name = name;
+    public Bank(String bankName, int accountNumb, int accountPw, int bankCode) {
+        this.bankName = bankName;
         this.accountNumb = accountNumb;
         this.accountPw = accountPw;
         this.bankCode = bankCode;
     }
 
     @Builder
-    public Bank(Long id, String name, int accountNumb, int accountPw, int bankCode) {
+    public Bank(Long id, String bankName, int accountNumb, int accountPw, int bankCode) {
         this.id = id;
-        this.name = name;
+        this.bankName = bankName;
         this.accountNumb = accountNumb;
         this.accountPw = accountPw;
         this.bankCode = bankCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "id=" + id +
+                ", bankName='" + bankName + '\'' +
+                ", accountNumb=" + accountNumb +
+                ", accountPw=" + accountPw +
+                ", bankCode=" + bankCode +
+                '}';
     }
 }

@@ -17,14 +17,13 @@ public class Application {
     @Bean
     CommandLineRunner init(BankRepository bankRepository) {
         return args -> {
-            Bank bank = bankRepository.findByAccountNumb(12341234);
+            Bank bank = bankRepository.findByAccountNumb(9999999);
             if (bank == null) {
                 bank = Bank.builder()
-                        .id(1L)
-                        .name("BANKTESTNAME")
-                        .accountNumb(12345)
-                        .accountPw(1234)
-                        .bankCode(12344)
+                        .bankName("BANKTESTNAME")
+                        .accountNumb(9999999)
+                        .accountPw(9999999)
+                        .bankCode(9999999)
                         .build();
                 bankRepository.save(bank);
             }

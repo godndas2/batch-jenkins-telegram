@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @SpringBootTest
 public class BankTest {
@@ -21,7 +20,7 @@ public class BankTest {
     public void init() {
         Bank bank = Bank.builder()
                 .id(1L)
-                .name("IBK")
+                .bankName("IBK")
                 .accountNumb(123456789)
                 .accountPw(1234)
                 .build();

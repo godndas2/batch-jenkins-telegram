@@ -5,7 +5,7 @@ spring:
     open-in-view: false
     generate-ddl: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -18,9 +18,9 @@ spring:
     password: password
   batch:
     initialize-schema: never
-    job:
-      names: ${job.name:NONE}
-      enabled: true
+#    job:
+#      names: ${job.name:NONE}
+#      enabled: true
   main:
     web-application-type: none
   profiles:
