@@ -29,4 +29,11 @@ public class Application {
             }
         };
     }
+//    @PostConstruct
+//    public void validateJobNames() {
+//        log.info("jobNames : {}", jobNames);
+//        if (jobNames.isEmpty() || jobNames.equals("NONE")) {
+//            throw new IllegalStateException("jobName 를 추가해주세요";
+//        }
+//    }
 }
