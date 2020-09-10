@@ -32,7 +32,7 @@ public class BatchConfig {
     private final StepBuilderFactory stepBuilderFactory;
     private final EntityManagerFactory entityManagerFactory;
 
-    private static final int CHUNK_SIZE = 10;
+    private static final int CHUNK_SIZE = 1000;
 
     @Bean
     public FlatFileItemReader<Bank> reader() {
