@@ -22,4 +22,9 @@ public class Account {
     public Account(String name) {
         this.name = name;
     }
+    
+    // TODO Account & Bank 편의 메소드
+    public void findByAccountAndBankCode() {
+        // 잠시 비공개
+    }
 }
