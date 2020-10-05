@@ -35,14 +35,14 @@ public class Bank {
         this.bankCode = bankCode;
     }
 
-    @Builder
-    public Bank(Long id, String bankName, int accountNumb, int accountPw, int bankCode) {
-        this.id = id;
-        this.bankName = bankName;
-        this.accountNumb = accountNumb;
-        this.accountPw = accountPw;
-        this.bankCode = bankCode;
-    }
+//    @Builder
+//    public Bank(Long id, String bankName, int accountNumb, int accountPw, int bankCode) {
+//        this.id = id;
+//        this.bankName = bankName;
+//        this.accountNumb = accountNumb;
+//        this.accountPw = accountPw;
+//        this.bankCode = bankCode;
+//    }
 
     @Override
     public String toString() {
